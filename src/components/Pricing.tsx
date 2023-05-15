@@ -9,8 +9,9 @@ export const Pricing = () => {
 					<b>$1,200 al año</b>
 				</h1>
 				<p>
-					Haz una cuenta y descubre todo lo que podrás ahorrar con nuestros descuentos, promociones y
-					medicamentos <br />gratuitos. ¡Tenemos hasta 12 meses sin intereses!
+					Compara y descubre todo lo que podrás ahorrar…
+					<br />
+					¡Tenemos hasta 12 meses sin intereses!
 				</p>
 				<a href='#'>
 					<Button size='sm' className='main-button  rounded-pill w-100 fw-500 py-3 px-4 border-0'>

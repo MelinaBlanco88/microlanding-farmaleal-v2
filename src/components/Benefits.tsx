@@ -5,7 +5,7 @@ import { TbPill, TbDiscount2, TbPhoneCall, TbTruckDelivery } from "react-icons/t
 const items = [
 	{
 		icon: <TbPill size={"1.9rem"} />,
-		label: "1 producto gratis al mes del catálogo de productos gratuitos.*",
+		label: "Escoge un producto gratis al mes de nuestro catálogo de más de 300 medicamentos pensados para ti",
 	},
 	{
 		icon: <TbDiscount2 size={"1.9rem"} />,
@@ -14,7 +14,11 @@ const items = [
 	{
 		icon: <TbTruckDelivery size={"1.9rem"} />,
 		label: "Entrega nacional *",
-		subText: "*El costo de los envíos corre por cuenta del afiliado. Envíos a CDMX sin costo.",
+		subText: "*Envíos a CDMX sin costo. El costo de los envíos corre por cuenta del afiliado. ",
+	},
+	{
+		icon: <TbPhoneCall size={"1.9rem"} />,
+		label: "Videoconsultas con médicos 24/7",
 	},
 ];
 
@@ -25,43 +29,37 @@ export const Benefits = () => {
 				CON TU <b className='membresia'>MEMBRESÍA</b> PODRÁS ACCEDER A
 			</h5>
 
-			<div className='w-100 row g-3 m-0 justify-content-center align-items-stretch text-white'>
-				<div className='left-side-container col-12 col-md-6 '>
+			<div className='row justify-content-center text-white'>
+				<div className='col-12 col-md-12 mb-1'>
 					<Stack direction='vertical' gap={3} className='h-100'>
 						<div className='benefit-item h-100 d-flex secondary-bg'>
 							<Stack className='my-4 justify-content-evenly align-items-center'>
 								<BiDollarCircle size={"1.9rem"} />
-								<p className='fw-500 h6'>Los medicamentos que quieras, al precio más bajo</p>
+								<p className='fw-500 h6'>Los medicamentos que requieras al precio más bajo GARANTIZADO</p>
 							</Stack>
 						</div>
-						<div className='benefit-item h-100 primary-bg d-flex'>
-							<Stack className='my-4 justify-content-evenly align-items-center'>
-								<TbPhoneCall size={"1.9rem"} />
-
-								<p className='fw-500 h6'>Videoconsultas con médicos 24/7</p>
-							</Stack>
-						</div>
+						
 					</Stack>
 				</div>
-				<div className='right-side-container col-12 col-md-6'>
-					<Stack direction='vertical' gap={3}>
+					<div className='row col-grid'>
 						{items.map((element, i) => {
 							return (
-								<Stack
-									key={element.label}
-									className={`${i % 2 === 0 ? "primary-bg" : "secondary-bg"} benefit-item w-100 d-flex justify-content-center`}
-								>
-									<Stack direction='horizontal' className='w-100 my-4 align-items-center justify-content-center'>
-										{element.icon}
-										<p className='fw-500 h6 ms-3  mb-0'>{element.label}</p>
-									</Stack>
+								<div className='col p-1'>
+									<Stack
+										key={element.label}
+										className={`${i % 3 === 0 ? "primary-bg" : "secondary-bg"} benefit-item h-100 d-flex justify-content-center`}
+									>
+										<Stack direction='horizontal' className='my-4 align-items-center justify-content-center'>
+											{element.icon}
+											<p className='fw-500 h6 ms-3  mb-0'>{element.label}</p>
+										</Stack>
 
-									{element.subText && <p className='small mx-auto'>{element.subText}</p>}
-								</Stack>
+										{element.subText && <p className='small mx-auto'>{element.subText}</p>}
+									</Stack>
+								</div>
 							);
 						})}
-					</Stack>
-				</div>
+					</div>
 			</div>
 		</section>
 	);

@@ -5,15 +5,15 @@ import { TbPill, TbDiscount2, TbPhoneCall, TbTruckDelivery } from "react-icons/t
 
 const Items = [
 	{
-		label: "El precio más bajo",
+		label: "Garantía de precio más bajo",
 		icon: <BiDollarCircle size={35} />,
 	},
 	{
-		label: "1 producto gratis al mes*",
+		label: "Un producto de nuestro catálogo pensado en ti al mes.*",
 		icon: <TbPill size={35} />,
 	},
 	{
-		label: "¡Miles de descuentos!",
+		label: "¡Miles de descuentos comerciales!",
 		icon: <TbDiscount2 size={35} />,
 	},
 	{
@@ -44,16 +44,16 @@ export const Hero = () => {
 								</h1>
 							</Row>
 							<Row className='color-secondary'>
-								<p className='fw-700 mb-0'>POR SÓLO</p>
+								<p className='fw-700 mb-0'>INVIERTE</p>
 								<Stack direction='horizontal' className='justify-content-center justify-content-md-start'>
-									<h2 className='fw-700 price'>$1,200</h2>
-									<h6 className='h6 fw-500 mb-0 ms-2'>AL AÑO</h6>
+									<h2 className='fw-700 price'>$100</h2>
+									<h6 className='h6 fw-500 mb-0 ms-2'>AL MES</h6>
 								</Stack>
 							</Row>
 							<Row>
 								<p className='color-secondary fw-500 small text-uppercase'>
-									Obtén descuentos de hasta 50% <br /> y{" "}
-									<span className='fw-700'>grandes beneficios en medicamentos de enfermedades crónicas</span>
+								Y te garantizamos ahorros sorprendentes <br /> {" "}
+									<span className='fw-700'>Expertos en medicamentos crónicos y alta especialidad.</span>
 								</p>
 							</Row>
 							<Row className='d-flex justify-content-between w-100'>
@@ -68,18 +68,11 @@ export const Hero = () => {
 									<a href='#benefits'>
 										<Button size='sm' className='bg-transparent btn-link ps-0 color-secondary'>
 											<h6 className='fw-700 mb-0'>
-												<u>VER BENEFICIOS</u>
+												<u>BENEFICIOS</u>
 											</h6>
 										</Button>
 									</a>
 								</Col>
-							</Row>
-							<Row className='mt-2 align-items-center justify-items-center w-100'>
-								<Stack direction={window.innerWidth <= 425 ? "vertical" : "horizontal"} className='justify-content-evenly '>
-									{Items.map((element) => {
-										return <HeroIcon key={element.label} {...element} />;
-									})}
-								</Stack>
 							</Row>
 						</Stack>
 					</Col>
@@ -89,6 +82,13 @@ export const Hero = () => {
 							<img className='hero_image position-absolute ' src='images/tarjetas.png' />
 						</div>
 					</Col>
+				</Row>
+				<Row className='mt-2 align-items-center justify-items-center w-100'>
+					<Stack direction={window.innerWidth <= 425 ? "vertical" : "horizontal"} className='justify-content-evenly small p-2 pt-3'>
+						{Items.map((element) => {
+							return <HeroIcon key={element.label} {...element} />;
+						})}
+					</Stack>
 				</Row>
 			</Container>
 		</section>
