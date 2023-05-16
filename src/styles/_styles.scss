@@ -79,6 +79,18 @@ body {
 	}
 }
 
+.main-button {
+	background-color: #cd3232;
+	font-size: 18px;
+	border: 2px solid #cd3232 !important;
+	transition: .3s ease;
+
+	&:hover {
+		background-color: white;
+		color: #cd3232;
+	}
+}
+
 #hero {
 	background-color: #29a18a21;
 	padding-bottom: 5rem;
@@ -92,11 +104,6 @@ body {
 
 	.price {
 		font-size: 3rem;
-	}
-
-	.main-button {
-		background-color: #cd3232;
-		font-size: 18px;
 	}
 	.hero-image-container {
 		margin: 0 auto;
@@ -193,7 +200,19 @@ body {
 		background-image: url("/images/benefitsCircles.png");
 		background-size: contain;
 		background-repeat: no-repeat;
+		animation: rotation 15s infinite linear;
 	}
+
+	@keyframes rotation {
+		0% {
+			transform: rotate(0)
+		}
+	
+		to {
+			transform: rotate(359deg)
+		}
+	}
+
 	@media (max-width: 768px) {
 		.membresia::after {
 			display: none;
@@ -210,7 +229,6 @@ body {
 	border-radius: 12px;
 	.main-button {
 		max-width: fit-content;
-		background-color: #cd3232;
 	}
 	position: relative;
 

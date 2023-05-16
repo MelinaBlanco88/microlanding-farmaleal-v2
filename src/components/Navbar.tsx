@@ -13,16 +13,16 @@ export const NavBar = () => {
 					</Col>
 					<Col xs={12} lg={2}>
 						<Stack direction='horizontal' gap={1} className='d-flex justify-content-center pt-2 pt-md-0'>
-							<a className='p-0 text-white mx-2'>
+							<a href="https://twitter.com/FarmaLeal/" className='p-0 text-white mx-2'>
 								<FaTwitter size={22} />
 							</a>
-							<a className='p-0 text-white mx-2'>
+							<a href="https://www.facebook.com/CFarmaLeal/" className='p-0 text-white mx-2'>
 								<AiFillFacebook size={22} />
 							</a>
-							<a className='p-0 text-white mx-2'>
+							<a href="https://www.instagram.com/farmaleal/" className='p-0 text-white mx-2'>
 								<AiOutlineInstagram size={22} />
 							</a>
-							<a className='p-0 text-white mx-2'>
+							<a href="https://www.youtube.com/channel/UCVezBeVMt6iPAsq2a9_4CIA" className='p-0 text-white mx-2'>
 								<AiFillYoutube size={22} />
 							</a>
 						</Stack>
