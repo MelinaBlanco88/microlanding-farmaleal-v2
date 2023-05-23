@@ -38,13 +38,16 @@ export const Hero = () => {
 							className=' mt-5 text-center text-md-start text-md-left align-items-center align-items-md-start pe-lg-5 justify-content-evenly'
 						>
 							<Row>
-								<h4 className='h4 color-secondary fw-400 mb-0'>MEMBRESÍA</h4>
+							<h1 className='h1 color-secondary fw-300'>
+									<span className='fw-700'>CLUB</span> 
+								</h1>
 								<h1 className='h1 color-secondary fw-300'>
-									<span className='fw-700'>CLUB</span> FARMALEAL
+									FARMALEAL
 								</h1>
 							</Row>
 							<Row className='color-secondary'>
-								<p className='fw-700 mb-0'>INVIERTE</p>
+								<p className='fw-700 mb-0'>GARANTIZADO</p>
+								<p className='fw-700 mb-0'>Por sólo</p>
 								<Stack direction='horizontal' className='justify-content-center justify-content-md-start'>
 									<h2 className='fw-700 price'>$100</h2>
 									<h6 className='h6 fw-500 mb-0 ms-2'>AL MES</h6>
@@ -52,8 +55,8 @@ export const Hero = () => {
 							</Row>
 							<Row>
 								<p className='color-secondary fw-500 small text-uppercase'>
-								Y te garantizamos ahorros sorprendentes <br /> {" "}
-									<span className='fw-700'>Expertos en medicamentos crónicos y alta especialidad.</span>
+								Ahorra miles de pesos en todos tus medicamentos <br /> {" "}
+									<span className='fw-700'>Somos líderes en medicamentos para crónicos y de alta especialidad.</span>
 								</p>
 							</Row>
 							<Row className='d-flex justify-content-between w-100'>

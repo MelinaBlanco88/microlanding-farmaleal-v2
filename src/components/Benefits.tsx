@@ -5,11 +5,11 @@ import { TbPill, TbDiscount2, TbPhoneCall, TbTruckDelivery } from "react-icons/t
 const items = [
 	{
 		icon: <TbPill size={"1.9rem"} />,
-		label: "Escoge un producto gratis al mes de nuestro catálogo de más de 300 medicamentos pensados para ti",
+		label: "Un producto gratis al mes de nuestro catálogo de más de 300 medicamentos pensados para ti",
 	},
 	{
 		icon: <TbDiscount2 size={"1.9rem"} />,
-		label: "Descuentos en ropa, restaurantes, viajes, laboratorios, consultas médicas, ópticas, dentistas y ¡mucho más!",
+		label: "Miles de descuentos comerciales en nuestra RED TDC",
 	},
 	{
 		icon: <TbTruckDelivery size={"1.9rem"} />,
@@ -26,10 +26,12 @@ export const Benefits = () => {
 	return (
 		<section id='benefits' className='my-5 px-2 text-center color-primary'>
 			<h5 className='h5 mb-5'>
-				CON TU <b className='membresia'>MEMBRESÍA</b> PODRÁS ACCEDER A
+			<span className='membresia'>Te</span> <b>garantizamos</b> el mejor precio del mercado pero además,<br />tu membresía incluye sin costo adicional:
 			</h5>
 
+			
 			<div className='row justify-content-center text-white'>
+				{/* 
 				<div className='col-12 col-md-12 mb-1'>
 					<Stack direction='vertical' gap={3} className='h-100'>
 						<div className='benefit-item h-100 d-flex secondary-bg'>
@@ -38,28 +40,29 @@ export const Benefits = () => {
 								<p className='fw-500 h6'>Los medicamentos que requieras al precio más bajo GARANTIZADO</p>
 							</Stack>
 						</div>
-						
 					</Stack>
 				</div>
-					<div className='row col-grid'>
-						{items.map((element, i) => {
-							return (
-								<div className='col p-1'>
-									<Stack
-										key={element.label}
-										className={`${i % 3 === 0 ? "primary-bg" : "secondary-bg"} benefit-item h-100 d-flex justify-content-center`}
-									>
-										<Stack direction='horizontal' className='my-4 align-items-center justify-content-center'>
-											{element.icon}
-											<p className='fw-500 h6 ms-3  mb-0'>{element.label}</p>
-										</Stack>
+				*/}
 
-										{element.subText && <p className='small mx-auto'>{element.subText}</p>}
+				<div className='row col-grid'>
+					{items.map((element, i) => {
+						return (
+							<div className='col p-1'>
+								<Stack
+									key={element.label}
+									className={`${i % 3 === 0 ? "primary-bg" : "secondary-bg"} benefit-item h-100 d-flex justify-content-center`}
+								>
+									<Stack direction='horizontal' className='my-4 align-items-center justify-content-center'>
+										{element.icon}
+										<p className='fw-500 h6 ms-3  mb-0'>{element.label}</p>
 									</Stack>
-								</div>
-							);
-						})}
-					</div>
+
+									{element.subText && <p className='small mx-auto'>{element.subText}</p>}
+								</Stack>
+							</div>
+						);
+					})}
+				</div>
 			</div>
 		</section>
 	);
