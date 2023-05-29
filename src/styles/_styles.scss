@@ -44,6 +44,38 @@ body {
 		font-weight: 700;
 	}
 }
+
+/* Underline From Center */
+.hvr-underline-from-center {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 51%;
+	right: 51%;
+	bottom: 0;
+	background: white;
+	height: 4px;
+	-webkit-transition-property: left, right;
+	transition-property: left, right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+	left: 0;
+	right: 0;
+  }
+
 #navbar {
 	.header-top {
 		font-size: 12px;
@@ -78,16 +110,29 @@ body {
 		}
 	}
 }
+.separator {
+	height: 10px;
+	margin: 40px 0;
+	position: relative;
+	overflow: hidden;
+	background-image: linear-gradient(to right, var(--primaryColor), var(--secondaryColor));
+}
 
 .main-button {
 	background-color: #cd3232;
-	font-size: 18px;
+	font-size: 20px;
 	border: 2px solid #cd3232 !important;
 	transition: .3s ease;
 
 	&:hover {
 		background-color: white;
 		color: #cd3232;
+	}
+}
+
+.tabla {
+	@media (max-width: 768px) {
+		display: none;
 	}
 }
 
@@ -203,6 +248,23 @@ body {
 		animation: rotation 15s infinite linear;
 	}
 
+	a {
+		color: white;
+		text-decoration: none;
+		.benefit-item { transition: .3s ease; }
+		
+
+		&:hover {
+			.benefit-item {
+				box-shadow: 0px 0px 15px 5px rgba(21, 161, 134, .75);
+			}
+
+			.secondary-bg.benefit-item {
+				box-shadow: 0px 0px 15px 5px rgba(42, 61, 83, .75);
+			}
+		}
+	}
+
 	@keyframes rotation {
 		0% {
 			transform: rotate(0)
@@ -210,6 +272,13 @@ body {
 	
 		to {
 			transform: rotate(359deg)
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.membresia::after {
+			top: -1.5rem;
+			rotate: -24deg;
 		}
 	}
 
@@ -265,5 +334,17 @@ body {
 		.row { 
 			margin: 30px 0;
 		}
+	}
+}
+
+@media (max-width: 768px) {
+	#hero .gap-2 { 
+		justify-content: center;
+	}
+}
+
+@media (max-width: 1023px) {
+	#benefits .benefit-item .h6 { 
+		font-size: 16px;
 	}
 }

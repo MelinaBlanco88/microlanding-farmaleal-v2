@@ -1,7 +1,7 @@
 import { Col, Row, Container, Stack, Button } from "react-bootstrap";
 import { HeroIcon } from ".";
 import { BiDollarCircle } from "react-icons/bi";
-import { TbPill, TbDiscount2, TbPhoneCall, TbTruckDelivery } from "react-icons/tb";
+import { TbPill, TbDiscount2, TbPhoneCall, TbTruckDelivery, TbExternalLink } from "react-icons/tb";
 
 const Items = [
 	{
@@ -58,15 +58,23 @@ export const Hero = () => {
 								Ahorra miles de pesos en todos tus medicamentos <br /> {" "}
 									<span className='fw-700'>Somos líderes en medicamentos para crónicos y de alta especialidad.</span>
 								</p>
+
+								<a className='color-secondary' href='#'>
+									<h6 className='fw-700 mb-0 d-flex align-items-center gap-2'>
+										CONSULTA NUESTROS PRECIOS EXCLUSIVOS <TbExternalLink size={22} />
+									</h6>
+								</a>
 							</Row>
 							<Row className='d-flex justify-content-between w-100'>
-								<Col xs={6}>
+								<Col xs={12} md={6}>
 									<a href='#'>
 										<Button size='sm' className='main-button  rounded-pill w-100 fw-500 py-3 border-0'>
 											OBTENER MEMBRESÍA
 										</Button>
 									</a>
 								</Col>
+
+								{/*
 								<Col xs={6} className='ps-2 ps-md-3 my-auto'>
 									<a href='#benefits'>
 										<Button size='sm' className='bg-transparent btn-link ps-0 color-secondary'>
@@ -76,6 +84,7 @@ export const Hero = () => {
 										</Button>
 									</a>
 								</Col>
+								*/}
 							</Row>
 						</Stack>
 					</Col>
@@ -86,6 +95,8 @@ export const Hero = () => {
 						</div>
 					</Col>
 				</Row>
+
+				{/*
 				<Row className='mt-2 align-items-center justify-items-center w-100'>
 					<Stack direction={window.innerWidth <= 425 ? "vertical" : "horizontal"} className='justify-content-evenly small p-2 pt-3'>
 						{Items.map((element) => {
@@ -93,6 +104,7 @@ export const Hero = () => {
 						})}
 					</Stack>
 				</Row>
+				*/}
 			</Container>
 		</section>
 	);

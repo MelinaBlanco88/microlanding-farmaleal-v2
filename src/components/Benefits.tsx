@@ -2,21 +2,26 @@ import React from "react";
 import { Stack } from "react-bootstrap";
 import { BiDollarCircle } from "react-icons/bi";
 import { TbPill, TbDiscount2, TbPhoneCall, TbTruckDelivery } from "react-icons/tb";
+import { Tabla } from "./Tabla";
 const items = [
-	{
+	{	
+		link: "https://tdconsentido.mx/",
 		icon: <TbPill size={"1.9rem"} />,
-		label: "Un producto gratis al mes de nuestro catálogo de más de 300 medicamentos pensados para ti",
+		label: "En tu primer compra mensual te regalamos un producto de nuestro catálogo de más de 300 medicamentos pensados para ti",
 	},
 	{
+		link: "https://tdconsentido.mx/",
 		icon: <TbDiscount2 size={"1.9rem"} />,
 		label: "Miles de descuentos comerciales en nuestra RED TDC",
 	},
 	{
+		link: "https://tdconsentido.mx/",
 		icon: <TbTruckDelivery size={"1.9rem"} />,
 		label: "Entrega nacional *",
-		subText: "*Envíos a CDMX sin costo. El costo de los envíos corre por cuenta del afiliado. ",
+		subText: "*Envíos gratis a CDMX. Resto del país a costo Neto de mensajería.",
 	},
 	{
+		link: "https://tdconsentido.mx/",
 		icon: <TbPhoneCall size={"1.9rem"} />,
 		label: "Videoconsultas con médicos 24/7",
 	},
@@ -25,11 +30,14 @@ const items = [
 export const Benefits = () => {
 	return (
 		<section id='benefits' className='my-5 px-2 text-center color-primary'>
-			<h5 className='h5 mb-5'>
+			<h1 className='h1 mb-4'>
+				<b>Beneficios</b>
+			</h1>
+
+			<h5 className='h5 mb-5 pt-0'>
 			<span className='membresia'>Te</span> <b>garantizamos</b> el mejor precio del mercado pero además,<br />tu membresía incluye sin costo adicional:
 			</h5>
 
-			
 			<div className='row justify-content-center text-white'>
 				{/* 
 				<div className='col-12 col-md-12 mb-1'>
@@ -47,10 +55,10 @@ export const Benefits = () => {
 				<div className='row col-grid'>
 					{items.map((element, i) => {
 						return (
-							<div className='col p-1'>
+							<a href={element.link} className='col p-3'>
 								<Stack
 									key={element.label}
-									className={`${i % 3 === 0 ? "primary-bg" : "secondary-bg"} benefit-item h-100 d-flex justify-content-center`}
+									className={`${i % 3 === 0 ? "primary-bg" : "secondary-bg"} p-2 benefit-item hvr-underline-from-center h-100 d-flex justify-content-center`}
 								>
 									<Stack direction='horizontal' className='my-4 align-items-center justify-content-center'>
 										{element.icon}
@@ -59,7 +67,7 @@ export const Benefits = () => {
 
 									{element.subText && <p className='small mx-auto'>{element.subText}</p>}
 								</Stack>
-							</div>
+							</a>
 						);
 					})}
 				</div>
