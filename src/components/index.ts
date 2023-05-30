@@ -4,3 +4,5 @@ export * from "./Hero";
 export * from "./HeroIcon";
 export * from "./Navbar";
 export * from "./Pricing";
+export * from "./Tabla";
+

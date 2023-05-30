@@ -1,26 +1,22 @@
 import { Container } from "react-bootstrap";
-import { Benefits, Footer, Hero, NavBar, Pricing } from "./components/";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/_styles.scss";
-import { Tabla } from "./components/Tabla";
+import { Routes , Route } from "react-router-dom";
+import { NavBar, Footer } from "./components";
+import { LandingPage, VideconsultasPage, EntregasPage } from "./pages";
 
+
+ 
 export const App = () => {
 	return (
 		<div style={{ minHeight: "100vh", width: "100%" }}>
 			<NavBar />
-			<Hero />
-			<Container className='px-0'>
-				<Benefits />
-				
-			</Container>
+			<Routes>
+				<Route path="/" Component={LandingPage} />
+				<Route path="/entregas" Component={EntregasPage} />
+				<Route path="/videoconsultas" Component={VideconsultasPage} />
 
-
-				<div className="separator"></div>
-
-				<Container className='px-0'>
-					<Tabla />
-					<Pricing />
-				</Container>
+			</Routes>
 			<Footer />
 		</div>
 	);

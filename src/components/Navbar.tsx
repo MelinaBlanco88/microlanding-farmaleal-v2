@@ -1,6 +1,7 @@
 import { Container, Row, Col, Stack, Navbar } from "react-bootstrap";
 import { AiFillFacebook, AiOutlineInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
 	return (
@@ -48,12 +49,12 @@ export const NavBar = () => {
 						</Col>
 						<Col xs={4} className=''>
 							<Stack direction='horizontal' gap={2} className='d-flex justify-content-end'>
-								<a className='text-decoration-none text-end' href='/'>
+								<Link className='text-decoration-none text-end' to='/'>
 									<p className='text-body mt-3 ms-3 fw-500 fs-6 text-decoration-none'>Inicio</p>
-								</a>
-								<a className='text-decoration-none text-end' href='/'>
+								</Link>
+								<Link className='text-decoration-none text-end' to='/'>
 									<p className='text-body mt-3 ms-3 fw-500 fs-6 text-decoration-none'>Login</p>
-								</a>
+								</Link>
 							</Stack>
 						</Col>
 					</Row>

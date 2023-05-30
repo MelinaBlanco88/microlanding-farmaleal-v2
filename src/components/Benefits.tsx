@@ -3,6 +3,7 @@ import { Stack } from "react-bootstrap";
 import { BiDollarCircle } from "react-icons/bi";
 import { TbPill, TbDiscount2, TbPhoneCall, TbTruckDelivery } from "react-icons/tb";
 import { Tabla } from "./Tabla";
+import { Link } from "react-router-dom";
 const items = [
 	{	
 		link: "https://tdconsentido.mx/",
@@ -15,13 +16,13 @@ const items = [
 		label: "Miles de descuentos comerciales en nuestra RED TDC",
 	},
 	{
-		link: "https://tdconsentido.mx/",
+		link: "/entregas",
 		icon: <TbTruckDelivery size={"1.9rem"} />,
 		label: "Entrega nacional *",
 		subText: "*Envíos gratis a CDMX. Resto del país a costo Neto de mensajería.",
 	},
 	{
-		link: "https://tdconsentido.mx/",
+		link: "/videoconsultas",
 		icon: <TbPhoneCall size={"1.9rem"} />,
 		label: "Videoconsultas con médicos 24/7",
 	},
@@ -55,7 +56,7 @@ export const Benefits = () => {
 				<div className='row col-grid'>
 					{items.map((element, i) => {
 						return (
-							<a href={element.link} className='col p-3'>
+							<Link to={element.link} className='col p-3'>
 								<Stack
 									key={element.label}
 									className={`${i % 3 === 0 ? "primary-bg" : "secondary-bg"} p-2 benefit-item hvr-underline-from-center h-100 d-flex justify-content-center`}
@@ -67,7 +68,7 @@ export const Benefits = () => {
 
 									{element.subText && <p className='small mx-auto'>{element.subText}</p>}
 								</Stack>
-							</a>
+							</Link>
 						);
 					})}
 				</div>
