@@ -9,6 +9,7 @@ import { LandingPage, VideconsultasPage, EntregasPage } from "./pages";
  
 export const App = () => {
 	return (
+		
 		<div style={{ minHeight: "100vh", width: "100%" }}>
 			<NavBar />
 			<Routes>
