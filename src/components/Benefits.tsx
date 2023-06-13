@@ -8,12 +8,13 @@ const items = [
 	{	
 		link: "https://tdconsentido.mx/",
 		icon: <TbPill size={"1.9rem"} />,
-		label: "En tu primer compra mensual te regalamos un producto de nuestro catálogo de más de 300 medicamentos pensados para ti",
+		label: "Te regalamos cualquiera de estos productos en una de tus compras mensuales.",
 	},
 	{
 		link: "https://tdconsentido.mx/",
 		icon: <TbDiscount2 size={"1.9rem"} />,
 		label: "Miles de descuentos comerciales en nuestra RED TDC",
+		subText: "*Al adquirir tu membresía recibirás tu tarjeta TDC.",
 	},
 	{
 		link: "/entregas",
@@ -25,6 +26,7 @@ const items = [
 		link: "/videoconsultas",
 		icon: <TbPhoneCall size={"1.9rem"} />,
 		label: "Videoconsultas con médicos 24/7",
+		subText: "*Al adquirir tu membresía recibirás un código para acceder a videoconsulta.",
 	},
 ];
 

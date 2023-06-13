@@ -120,13 +120,23 @@ body {
 
 .main-button {
 	background-color: #cd3232;
-	font-size: 20px;
+	font-size: 16px;
 	border: 2px solid #cd3232 !important;
 	transition: .3s ease;
 
 	&:hover {
 		background-color: white;
 		color: #cd3232;
+	}
+
+	&.button-green {
+		background-color: var(--primaryColor);
+		border: 2px solid var(--primaryColor) !important;
+
+		&:hover {
+			background-color: white;
+			color: var(--primaryColor);
+		}
 	}
 }
 

@@ -59,17 +59,27 @@ export const Hero = () => {
 									<span className='fw-700'>Somos líderes en medicamentos para crónicos y de alta especialidad.</span>
 								</p>
 
+								{/*
 								<a className='color-secondary' href='#'>
 									<h6 className='fw-700 mb-0 d-flex align-items-center gap-2'>
 										CONSULTA NUESTROS PRECIOS EXCLUSIVOS <TbExternalLink size={22} />
 									</h6>
 								</a>
+								*/}
 							</Row>
 							<Row className='d-flex justify-content-between w-100'>
-								<Col xs={12} md={6}>
+								<Col xs={12} md={5}>
 									<a href='#'>
-										<Button size='sm' className='main-button  rounded-pill w-100 fw-500 py-3 border-0'>
+										<Button size='sm' className='main-button  rounded-pill w-100 fw-500 py-4 border-0'>
 											OBTENER MEMBRESÍA
+										</Button>
+									</a>
+								</Col>
+
+								<Col xs={12} md={7}>
+									<a href='#'>
+										<Button size='sm' className='main-button button-green rounded-pill w-100 fw-500 py-4 border-0'>
+											CONSULTA NUESTROS PRECIOS EXCLUSIVOS <TbExternalLink size={22} />
 										</Button>
 									</a>
 								</Col>
